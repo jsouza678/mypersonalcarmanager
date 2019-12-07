@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darker_but_not_too_much"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_img_mask1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lighter"
+            android:fadeScrollbars="false"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lighter"
+                android:isScrollContainer="true">
+
+                <TextView
+                    android:id="@+id/text_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/amaranth"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    fab:layout_constraintEnd_toEndOf="parent"
+                    fab:layout_constraintStart_toStartOf="parent"
+                    fab:layout_constraintTop_toTopOf="parent"
+                    tools:text="Olá João!" />
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.github.clans.fab.FloatingActionMenu
+                        android:id="@+id/menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        fab:layout_constraintBottom_toBottomOf="parent"
+                        fab:layout_constraintEnd_toEndOf="parent"
+                        fab:menu_animationDelayPerItem="50"
+                        fab:menu_buttonSpacing="0dp"
+                        fab:menu_colorNormal="@color/colorPrimary"
+                        fab:menu_colorPressed="@color/colorAccent"
+                        fab:menu_colorRipple="@color/colorPrimary"
+                        fab:menu_fab_hide_animation="@anim/hide_to_bottom"
+                        fab:menu_fab_show_animation="@anim/show_from_bottom"
+                        fab:menu_fab_size="normal"
+                        fab:menu_icon="@drawable/fab_add"
+                        fab:menu_labels_colorNormal="@android:color/white"
+                        fab:menu_labels_colorPressed="#444444"
+                        fab:menu_labels_colorRipple="#66FFFFFF"
+                        fab:menu_labels_cornerRadius="3dp"
+                        fab:menu_labels_ellipsize="none"
+                        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+                        fab:menu_labels_margin="0dp"
+                        fab:menu_labels_maxLines="-1"
+                        fab:menu_labels_padding="8dp"
+                        fab:menu_labels_paddingBottom="4dp"
+                        fab:menu_labels_paddingLeft="8dp"
+                        fab:menu_labels_paddingRight="8dp"
+                        fab:menu_labels_paddingTop="4dp"
+                        fab:menu_labels_position="left"
+                        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+                        fab:menu_labels_showShadow="true"
+                        fab:menu_labels_singleLine="false"
+                        fab:menu_labels_textColor="#000000"
+                        fab:menu_labels_textSize="14sp"
+                        fab:menu_openDirection="up">
+
+                        <com.github.clans.fab.FloatingActionButton
+                            android:id="@+id/menu_oleo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_build_black_24dp"
+                            android:tint="@color/colorPrimaryDark"
+                            fab:fab_colorNormal="@color/colorPrimaryDark"
+                            fab:fab_colorPressed="@color/colorAccent"
+                            fab:fab_label="Troca de óleo"
+                            fab:fab_size="mini" />
+
+                        <com.github.clans.fab.FloatingActionButton
+                            android:id="@+id/menu_filtros"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_build_black_24dp"
+                            fab:fab_colorNormal="@color/colorPrimaryDark"
+                            fab:fab_colorPressed="@color/colorAccent"
+                            fab:fab_label="Troca de filtros"
+                            fab:fab_size="mini" />
+
+                    </com.github.clans.fab.FloatingActionMenu>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:elevation="4dp"
+                    android:scaleType="centerInside"
+                    fab:layout_constraintEnd_toEndOf="parent"
+                    fab:layout_constraintStart_toStartOf="parent"
+                    fab:layout_constraintTop_toBottomOf="@+id/text_home"
+                    fab:srcCompat="@drawable/car" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_img_mask2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    fab:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"
+                        android:isScrollContainer="false">
+
+                        <TextView
+                            android:id="@+id/txt_marca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="Volkswagen"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            fab:layout_constraintEnd_toEndOf="parent"
+                            fab:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_modelo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="Amarok V10 Turbo diesel"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            fab:layout_constraintEnd_toEndOf="@+id/txt_marca"
+                            fab:layout_constraintStart_toStartOf="@+id/txt_marca"
+                            fab:layout_constraintTop_toBottomOf="@+id/txt_marca" />
+
+                        <TextView
+                            android:id="@+id/txt_ano"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="2009/2010"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="24sp"
+                            fab:layout_constraintEnd_toEndOf="@+id/txt_modelo"
+                            fab:layout_constraintStart_toStartOf="@+id/txt_modelo"
+                            fab:layout_constraintTop_toBottomOf="@+id/txt_modelo" />
+
+                        <TextView
+                            android:id="@+id/txt_km_atual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="12345 km"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            fab:layout_constraintEnd_toEndOf="@+id/txt_ano"
+                            fab:layout_constraintStart_toStartOf="@+id/txt_ano"
+                            fab:layout_constraintTop_toBottomOf="@+id/txt_ano" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
